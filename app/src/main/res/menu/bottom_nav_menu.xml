@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:title="Pasos"
+        android:icon="@drawable/ic_pasos"
+        android:id="@+id/nav_pasos"/>
+
+    <item
+        android:title="Logros"
+        android:icon="@drawable/ic_logros"
+        android:id="@+id/nav_logros"/>
+
+    <item
+        android:title="Metas"
+        android:icon="@drawable/ic_metas"
+        android:id="@+id/nav_metas"/>
+
+    <item
+        android:title="Opciones"
+        android:icon="@drawable/ic_opciones"
+        android:id="@+id/nav_opciones"/>
+
+</menu>

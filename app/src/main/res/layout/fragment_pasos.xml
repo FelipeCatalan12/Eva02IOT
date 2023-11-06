@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".vistas.PasosFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/contador_de_pasos"
+        android:textSize="33sp"
+        android:gravity="center"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/robotomonowght"
+        android:textColor="@color/white"/>
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="match_parent"
+        android:layout_height="280dp"
+        android:src = "@drawable/logo"
+        android:layout_gravity="center"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/calorias_quemadas"
+        android:textSize="33sp"
+        android:gravity="center"
+        android:layout_marginTop="665dp"
+        android:fontFamily="@font/robotomonowght"
+        android:textColor="@color/white"/>
+
+
+</FrameLayout>

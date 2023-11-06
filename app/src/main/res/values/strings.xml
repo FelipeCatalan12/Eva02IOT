@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">Eva02IOT</string>
+    <string name="username">Nombre usuario</string>
+    <string name="clave">Clave</string>
+    <string name="repetirclave">Repetir clave</string>
+    <string name="iniciar_sesion">Iniciar Sesión</string>
+    <string name="crear_cuenta">Crear cuenta</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="contador_de_pasos">Contador de pasos</string>
+    <string name="calorias_quemadas">Calorías quemadas</string>
+    <string name="logro_3">Logro 3</string>
+    <string name="logro_2">Logro 2</string>
+    <string name="logro_4">Logro 4</string>
+    <string name="logro_5">Logro 5</string>
+    <string name="logro_1">Logro 1</string>
+    <string name="metapasos"><![CDATA[Hoy alcanza los 10.000 pasos -> 0/10.000]]></string>
+    <string name="metakcal"><![CDATA[Quema 150 K/Cal caminando -> 0/150]]></string>
+    <string name="metacuadras">Baja 2 cuadras antes de la bajada usual de tu casa</string>
+    <string name="cerrar_sesion">Cerrar sesión</string>
+    <string name="conectar_reloj">Conectar Reloj</string>
+    <string name="informacion_legal">Información Legal</string>
+</resources>

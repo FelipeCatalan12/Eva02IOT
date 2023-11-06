@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".vistas.LogrosFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <LinearLayout
+        android:id="@+id/checkbox_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:orientation="vertical">
+
+        <CheckBox
+            android:id="@+id/checkbox_child_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/logro_1"
+            android:padding="35dp"
+            android:fontFamily="@font/robotomonowght"
+            android:background="@color/checkbox"
+            android:layout_marginBottom="25dp"
+            android:textSize="22sp"
+            android:textColor="@color/white"/>
+
+        <CheckBox
+            android:id="@+id/checkbox_child_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/logro_2"
+            android:padding="35dp"
+            android:fontFamily="@font/robotomonowght"
+            android:background="@color/checkbox"
+            android:layout_marginBottom="30dp"
+            android:textSize="22sp"
+            android:textColor="@color/white"/>
+
+        <CheckBox
+            android:id="@+id/checkbox_child_3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/logro_3"
+            android:padding="35dp"
+            android:fontFamily="@font/robotomonowght"
+            android:background="@color/checkbox"
+            android:layout_marginBottom="30dp"
+            android:textSize="22sp"
+            android:textColor="@color/white"/>
+
+
+        <CheckBox
+            android:id="@+id/checkbox_child_4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/logro_4"
+            android:padding="35dp"
+            android:fontFamily="@font/robotomonowght"
+            android:background="@color/checkbox"
+            android:layout_marginBottom="30dp"
+            android:textSize="22sp"
+            android:textColor="@color/white"/>
+
+        <CheckBox
+            android:id="@+id/checkbox5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/logro_5"
+            android:padding="35dp"
+            android:fontFamily="@font/robotomonowght"
+            android:background="@color/checkbox"
+            android:textSize="22sp"
+            android:textColor="@color/white"
+            android:layout_marginBottom="90dp"/>
+
+    </LinearLayout>
+
+</FrameLayout>
