@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "105308834529",
+    "project_id": "stepsdb-6dce6",
+    "storage_bucket": "stepsdb-6dce6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:105308834529:android:a7c85436561514240705a0",
+        "android_client_info": {
+          "package_name": "com.example.eva02iot"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDL2LV3JznDwDAcIRCDZqQOkSh3ijvSvko"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

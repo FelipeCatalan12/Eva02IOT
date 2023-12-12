@@ -20,4 +20,6 @@
     <string name="cerrar_sesion">Cerrar sesión</string>
     <string name="conectar_reloj">Conectar Reloj</string>
     <string name="informacion_legal">Información Legal</string>
+    <string name="e_mail">E-mail</string>
+    <string name="password">Password</string>
 </resources>

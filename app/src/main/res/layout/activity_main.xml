@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@drawable/fondo"
     android:orientation="vertical"
     tools:context=".MainActivity">
@@ -22,45 +23,42 @@
             android:layout_height="95dp"
             android:src = "@drawable/logo"/>
 
-        <EditText
-            android:id="@+id/Username"
+        <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="35dp"
-            android:autofillHints=""
+            android:id="@+id/tilEmail"
+            app:startIconDrawable="@drawable/ic_email"
+            android:hint="@string/e_mail"
+            />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tilPassword"
+            app:startIconDrawable="@drawable/ic_password"
+            android:hint="@string/password"
+            android:layout_marginTop="10dp"
             android:fontFamily="@font/robotomonowght"
-            android:hint="@string/username"
             android:inputType="textPersonName"
             android:textColor="@color/white"
             android:textColorHint="@color/white"
-            android:textSize="24sp" />
+            android:textSize="34sp"
+            >
 
-        <EditText
-            android:id="@+id/Clave"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
-            android:fontFamily="@font/robotomonowght"
-            android:hint="@string/clave"
-            android:inputType="textPassword"
-            android:textColor="@color/white"
-            android:textColorHint="@color/white"
-            android:textSize="24sp" />
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
 
-        <EditText
-            android:id="@+id/RepetirClave"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
-            android:fontFamily="@font/robotomonowght"
-            android:hint="@string/repetirclave"
-            android:inputType="textPassword"
-            android:textColor="@color/white"
-            android:textColorHint="@color/white"
-            android:textSize="24sp" />
+        </com.google.android.material.textfield.TextInputLayout>
 
         <Button
-            android:id="@+id/btnSignIn"
+            android:id="@+id/btnLogin"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
@@ -70,17 +68,6 @@
             android:textSize="20sp"
             android:backgroundTint="@color/buttons"/>
 
-
-        <Button
-            android:id="@+id/btnRegister"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:fontFamily="@font/robotomonowght"
-            android:text="@string/crear_cuenta"
-            android:textAllCaps="true"
-            android:textSize="20sp"
-            android:backgroundTint="@color/buttons"/>
 
 
     </LinearLayout>
