@@ -27,7 +27,7 @@ class MainActivity : AppCompatActivity() {
 
         //Inicializar Firebase con auth
 
-        val auth = Firebase.auth
+        auth = Firebase.auth
 
         //Activacion de Login on click
 
@@ -44,6 +44,19 @@ class MainActivity : AppCompatActivity() {
                 if (password.isEmpty()) {
                     binding.etPassword.error = "Ingresa una password"
                 }
+
+                signIn(email, password)
         }
+    }
+
+    private fun signIn(email: String, password: String) {
+        auth.signInWithEmailAndPassword(email, password)
+            .addOnCompleteListener {
+                if(it.isSuccessful){
+                    Toast.makeText(this, "Inicio de sesión exitoso", Toast.LENGTH_LONG).show()
+                }else{
+                    Toast.makeText(this, "ERROR", Toast.LENGTH_LONG).show()
+                }
+            }
     }
 }
