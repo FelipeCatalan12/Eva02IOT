@@ -18,7 +18,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
 
     //Firebase Authentication
-    private lateinit var auth: FirebaseAuth;
+    private lateinit var auth: FirebaseAuth
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -43,6 +43,7 @@ class MainActivity : AppCompatActivity() {
 
                 if (password.isEmpty()) {
                     binding.etPassword.error = "Ingresa una password"
+                    return@setOnClickListener
                 }
 
                 signIn(email, password)
@@ -54,6 +55,8 @@ class MainActivity : AppCompatActivity() {
             .addOnCompleteListener {
                 if(it.isSuccessful){
                     Toast.makeText(this, "Inicio de sesión exitoso", Toast.LENGTH_LONG).show()
+                    val intent = Intent(this, VistaBienvenida::class.java)
+                    startActivity(intent)
                 }else{
                     Toast.makeText(this, "ERROR", Toast.LENGTH_LONG).show()
                 }

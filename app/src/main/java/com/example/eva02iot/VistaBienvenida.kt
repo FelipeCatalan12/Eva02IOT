@@ -7,13 +7,18 @@ import android.util.Log
 import android.widget.TextView
 import android.widget.Toast
 import com.example.eva02iot.databinding.ActivityMainBinding
+import com.example.eva02iot.databinding.ActivityVistabienvenidaBinding
 import com.example.eva02iot.vistas.LogrosFragment
 import com.example.eva02iot.vistas.MetasFragment
 import com.example.eva02iot.vistas.OpcionesFragment
 import com.example.eva02iot.vistas.PasosFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import com.google.firebase.Firebase
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.auth
 
 class VistaBienvenida : AppCompatActivity() {
+
     @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
