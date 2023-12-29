@@ -12,54 +12,49 @@ import com.example.eva02iot.databinding.ActivityMainBinding
 import com.google.firebase.Firebase
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.auth
+import com.google.firebase.database.DataSnapshot
+import com.google.firebase.database.DatabaseError
+import com.google.firebase.database.DatabaseReference
+import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.database.ValueEventListener
 
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
 
-    //Firebase Authentication
-    private lateinit var auth: FirebaseAuth
+    private lateinit var textViewSteps: TextView
+    //Firebase DB
+
+    private lateinit var database: DatabaseReference
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        //Inicializar Firebase con auth
+        textViewSteps = binding.textViewSteps
 
-        auth = Firebase.auth
+        //Inicio de DB y ruta de almacenamiento
 
-        //Activacion de Login on click
+        database = FirebaseDatabase.getInstance().getReference("datos/pasos")
 
-        binding.btnLogin.setOnClickListener {
+        //Generacion de ID unico
 
-                val email = binding.etEmail.text.toString()
-                val password = binding.etPassword.text.toString()
+        val id = database.child("Pasos").push().key
 
-                if (email.isEmpty()) {
-                    binding.etEmail.error = "Ingresa un e-mail"
-                    return@setOnClickListener
-                }
-
-                if (password.isEmpty()) {
-                    binding.etPassword.error = "Ingresa una password"
-                    return@setOnClickListener
-                }
-
-                signIn(email, password)
-        }
-    }
-
-    private fun signIn(email: String, password: String) {
-        auth.signInWithEmailAndPassword(email, password)
-            .addOnCompleteListener {
-                if(it.isSuccessful){
-                    Toast.makeText(this, "Inicio de sesión exitoso", Toast.LENGTH_LONG).show()
-                    val intent = Intent(this, VistaBienvenida::class.java)
-                    startActivity(intent)
-                }else{
-                    Toast.makeText(this, "ERROR", Toast.LENGTH_LONG).show()
-                }
+        database.addValueEventListener(object : ValueEventListener {
+            override fun onDataChange(dataSnapshot: DataSnapshot) {
+                // Obtener el valor de pasos y mostrarlo en el TextView
+                val steps = dataSnapshot.getValue(Long::class.java) ?: 0
+                textViewSteps.text = "Pasos: $steps"
             }
+
+
+            override fun onCancelled(databaseError: DatabaseError) {
+                // Manejar errores de conexión o lectura de la base de datos
+                Log.e("Firebase", "Error al obtener datos: ${databaseError.message}")
+            }
+
+        })
     }
 }
